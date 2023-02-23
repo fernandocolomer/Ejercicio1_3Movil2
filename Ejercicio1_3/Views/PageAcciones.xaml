@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1_3.Views.PageAcciones">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--Frame  HeightRequest="900"-->
+
+                
+                    
+                    <Entry x:Name="id" Placeholder="Codigo" Keyboard="Text" Text="{Binding Id}" IsEnabled="False" Margin="10,0,10,0"/>
+                   
+                    <Entry x:Name="nombres" Keyboard="Text" Placeholder="Nombre" Text="{Binding Nombre}" Margin="10,0,10,0"/>
+                    <Entry x:Name="apellidos" Keyboard="Text" Placeholder="Apellido" Text="{Binding Apellidos}"  Margin="10,0,10,0"/>
+                    <Entry x:Name="edad" Keyboard="Numeric" Placeholder="Edad" Text="{Binding Edad}" Margin="10,0,10,0"/>
+                    <Entry x:Name="correo" Keyboard="Email" Placeholder="Correo Electronico" Text="{Binding Correo}" Margin="10,0,10,0"/>
+                    <Entry x:Name="direccion" Keyboard="Text" Placeholder="Direccion" Text="{Binding Direccion}" Margin="10,0,10,0"/>
+
+            <Button  Grid.Column="2" x:Name="btnUpdate" Text="Actualizar" CornerRadius="20" Margin="10,0,10,0" BackgroundColor="DarkRed" Clicked="btnUpdate_Clicked" TextColor="white"></Button>
+            <Button  Grid.Column="2" x:Name="btnDelete" Text="Eliminar"  CornerRadius="20" Margin="10,0,10,0" BackgroundColor="DarkRed" Clicked="btnDelete_Clicked" TextColor="White"  ></Button>
+                
+                
+
+
+
+            <!--/Frame-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

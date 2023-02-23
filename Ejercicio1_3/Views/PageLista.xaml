@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1_3.Views.PageLista">
+
+    <ContentPage.ToolbarItems >
+        <ToolbarItem  Text="Agregar" x:Name="toolAgregar" Clicked="toolAgregar_Clicked"  />
+
+
+    </ContentPage.ToolbarItems>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <CollectionView x:Name="ListEmpleados"
+                             Margin="20"
+                            SelectionMode="Single"
+                            SelectionChanged="ListEmpleados_SelectionChanged"  >
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="5"
+                                       
+                                       />
+
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate >
+
+
+
+                        <StackLayout >
+                            <Label FontSize="16" Text="{Binding Nombre}"/>
+                            <Label FontSize="16" Text="{Binding Apellidos}"/>
+                            <Label FontSize="16" Text="{Binding Edad}"/>
+                            <Label FontSize="16" Text="{Binding Correo}"/>
+                            <Label FontSize="16" Text="{Binding Direccion}"/>
+                        </StackLayout>
+                        <!--/ViewCell-->
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+
+            </CollectionView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
